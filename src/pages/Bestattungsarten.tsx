@@ -99,7 +99,7 @@ export const Bestattungsarten = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="font-serif text-4xl font-bold text-foreground mb-4">
-            Bestattungsarten & Friedhöfe
+            Bestattungsarten 
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Jeder Abschied ist einzigartig. Entdecken Sie die verschiedenen Möglichkeiten 
@@ -107,143 +107,71 @@ export const Bestattungsarten = () => {
           </p>
         </div>
 
-        <Tabs defaultValue="arten" className="space-y-8">
-          <TabsList className="grid w-full grid-cols-2">
-            <TabsTrigger value="arten">Bestattungsarten</TabsTrigger>
-            <TabsTrigger value="friedhoefe">Friedhöfe</TabsTrigger>
-          </TabsList>
-
-          <TabsContent value="arten" className="space-y-8">
-            <div className="grid gap-8">
-              {burialTypes.map((type) => (
-                <Card key={type.id} className="shadow-soft hover:shadow-elegant transition-elegant">
-                  <CardHeader>
-                    <div className="flex items-start justify-between">
-                      <div className="flex items-start space-x-4">
-                        <div className="bg-primary/10 p-3 rounded-lg">
-                          <type.icon className="h-8 w-8 text-primary" />
-                        </div>
-                        <div>
-                          <CardTitle className="font-serif text-2xl mb-1">{type.title}</CardTitle>
-                          <CardDescription className="text-lg">{type.subtitle}</CardDescription>
-                          <p className="text-muted-foreground mt-2">{type.description}</p>
-                        </div>
-                      </div>
-                      <div className="text-right">
-                        <Badge variant="secondary" className="mb-2">
-                          <Euro className="h-3 w-3 mr-1" />
-                          {type.price}
-                        </Badge>
-                        <div className="text-sm text-muted-foreground">
-                          <Clock className="h-3 w-3 inline mr-1" />
-                          {type.duration}
-                        </div>
-                      </div>
+        <div className="grid gap-8">
+          {burialTypes.map((type) => (
+            <Card key={type.id} className="shadow-soft hover:shadow-elegant transition-elegant">
+              <CardHeader>
+                <div className="flex items-start justify-between">
+                  <div className="flex items-start space-x-4">
+                    <div className="bg-primary/10 p-3 rounded-lg">
+                      <type.icon className="h-8 w-8 text-primary" />
                     </div>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div>
-                        <h4 className="font-semibold mb-3 text-foreground">Merkmale & Vorteile</h4>
-                        <ul className="space-y-2">
-                          {type.features.map((feature, index) => (
-                            <li key={index} className="flex items-start space-x-2">
-                              <Heart className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
-                              <span className="text-muted-foreground text-sm">{feature}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold mb-3 text-foreground">Ablauf</h4>
-                        <ol className="space-y-2">
-                          {type.process.map((step, index) => (
-                            <li key={index} className="flex items-start space-x-2">
-                              <span className="bg-primary text-primary-foreground text-xs rounded-full w-5 h-5 flex items-center justify-center mt-0.5 flex-shrink-0">
-                                {index + 1}
-                              </span>
-                              <span className="text-muted-foreground text-sm">{step}</span>
-                            </li>
-                          ))}
-                        </ol>
-                      </div>
+                    <div>
+                      <CardTitle className="font-serif text-2xl mb-1">{type.title}</CardTitle>
+                      <CardDescription className="text-lg">{type.subtitle}</CardDescription>
+                      <p className="text-muted-foreground mt-2">{type.description}</p>
                     </div>
-                    <div className="mt-6 pt-6 border-t border-border">
-                      <Button asChild>
-                        <Link to="/kostenrechner">
-                          Kosten berechnen
-                        </Link>
-                      </Button>
+                  </div>
+                  <div className="text-right">
+                    <Badge variant="secondary" className="mb-2">
+                      <Euro className="h-3 w-3 mr-1" />
+                      {type.price}
+                    </Badge>
+                    <div className="text-sm text-muted-foreground">
+                      <Clock className="h-3 w-3 inline mr-1" />
+                      {type.duration}
                     </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </TabsContent>
-
-          <TabsContent value="friedhoefe" className="space-y-8">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {cemeteries.map((cemetery, index) => (
-                <Card key={index} className="shadow-soft hover:shadow-elegant transition-elegant">
-                  <CardHeader>
-                    <div className="flex items-start justify-between">
-                      <div>
-                        <CardTitle className="font-serif text-lg">{cemetery.name}</CardTitle>
-                        <CardDescription>{cemetery.type}</CardDescription>
-                      </div>
-                      <Badge variant="outline" className="text-xs">
-                        <MapPin className="h-3 w-3 mr-1" />
-                        {cemetery.distance}
-                      </Badge>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2 mb-4">
-                      {cemetery.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-start space-x-2">
-                          <Heart className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-semibold mb-3 text-foreground">Merkmale & Vorteile</h4>
+                    <ul className="space-y-2">
+                      {type.features.map((feature, index) => (
+                        <li key={index} className="flex items-start space-x-2">
+                          <Heart className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
                           <span className="text-muted-foreground text-sm">{feature}</span>
                         </li>
                       ))}
                     </ul>
-                    <Button variant="outline" size="sm" className="w-full">
-                      Details ansehen
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-
-            <Card className="shadow-soft">
-              <CardHeader>
-                <CardTitle className="font-serif text-xl">Friedhofsgebühren</CardTitle>
-                <CardDescription>
-                  Die Friedhofsgebühren variieren je nach Friedhof, Grabart und Liegezeit. 
-                  Wir beraten Sie gerne über alle anfallenden Kosten.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="grid md:grid-cols-3 gap-4 text-center">
-                  <div className="p-4 bg-secondary/30 rounded-lg">
-                    <h4 className="font-semibold mb-2">Reihengrab</h4>
-                    <p className="text-2xl font-bold text-primary">450-800€</p>
-                    <p className="text-sm text-muted-foreground">20 Jahre Nutzung</p>
                   </div>
-                  <div className="p-4 bg-secondary/30 rounded-lg">
-                    <h4 className="font-semibold mb-2">Wahlgrab</h4>
-                    <p className="text-2xl font-bold text-primary">1200-2500€</p>
-                    <p className="text-sm text-muted-foreground">30 Jahre Nutzung</p>
+                  <div>
+                    <h4 className="font-semibold mb-3 text-foreground">Ablauf</h4>
+                    <ol className="space-y-2">
+                      {type.process.map((step, index) => (
+                        <li key={index} className="flex items-start space-x-2">
+                          <span className="bg-primary text-primary-foreground text-xs rounded-full w-5 h-5 flex items-center justify-center mt-0.5 flex-shrink-0">
+                            {index + 1}
+                          </span>
+                          <span className="text-muted-foreground text-sm">{step}</span>
+                        </li>
+                      ))}
+                    </ol>
                   </div>
-                  <div className="p-4 bg-secondary/30 rounded-lg">
-                    <h4 className="font-semibold mb-2">Urnengrab</h4>
-                    <p className="text-2xl font-bold text-primary">350-600€</p>
-                    <p className="text-sm text-muted-foreground">15 Jahre Nutzung</p>
-                  </div>
+                </div>
+                <div className="mt-6 pt-6 border-t border-border">
+                  <Button asChild>
+                    <Link to="/kostenrechner">
+                      Kosten berechnen
+                    </Link>
+                  </Button>
                 </div>
               </CardContent>
             </Card>
-          </TabsContent>
-        </Tabs>
+          ))}
+        </div>
 
         {/* CTA Section */}
         <div className="mt-16 text-center">

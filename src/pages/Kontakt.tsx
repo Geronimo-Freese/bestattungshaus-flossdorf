@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Phone, Mail, MapPin, Clock, Heart, Send } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Heart, Send, House } from "lucide-react";
 import { EMERGENCY_PHONE, ADDRESS_STREET, ADDRESS_CITY, ADDRESS_COUNTRY, EMAIL, WEEKDAYS, SATURDAY, SUNDAY } from "@/config/constants";
 
 export const Kontakt = () => {
@@ -146,20 +146,29 @@ export const Kontakt = () => {
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start space-x-3">
                     <Clock className="h-5 w-5 text-primary mt-1" />
                     <div>
                       <p className="font-semibold">Öffnungszeiten</p>
                       <div className="text-muted-foreground space-y-1">
                         <p className="text-destructive font-medium">Erreichbarkeit: 24/7</p>
-                        <p>{WEEKDAYS}</p>
-                        <p>{SATURDAY}</p>
-                        <p>{SUNDAY}</p>
                       </div>
                     </div>
                   </div>
                 </div>
+                  
+                  <div className="flex items-start space-x-3">
+                    <House className="h-5 w-5 text-primary mt-1" />
+                    <div>
+                      <p className="font-semibold">Bürozeiten</p>
+                      <div className="text-muted-foreground space-y-1">
+                        <p>{WEEKDAYS}</p>
+                        <p>{SATURDAY}</p>
+                      </div>
+                    </div>
+                  </div>
+
                 
               </CardContent>
             </Card>

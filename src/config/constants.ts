@@ -14,8 +14,8 @@ export const SITE_CONFIG = {
   
   // Öffnungszeiten
   hours: {
-    weekdays: "Mo-Fr: 8:00 - 18:00",
-    saturday: "Sa: 9:00 - 14:00",
+    weekdays: "Mo-Do: 8:00 - 17:00",
+    saturday: "Fr-Sa: 9:00 - 14:00",
     sunday: "So: Geschlossen"
   },
   
