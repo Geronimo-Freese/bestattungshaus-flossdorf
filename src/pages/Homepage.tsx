@@ -172,7 +172,7 @@ export const Homepage = () => {
                 Kontakt aufnehmen
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
+            <Button size="lg" variant="secondary" asChild>
               <Link to="/ueber-uns">
                 Über uns erfahren
               </Link>
