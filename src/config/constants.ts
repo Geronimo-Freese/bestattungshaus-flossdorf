@@ -29,16 +29,10 @@ export const SITE_CONFIG = {
   // Impressum & Rechtliches
   legal: {
     companyName: "Bestattungshaus Flossdorf",
-    owner: "Max Mustermann",
-    taxId: "DE123456789", // Steuernummer
-    vatId: "DE123456789", // Umsatzsteuer-ID
-    registerCourt: "Amtsgericht Gießen",
-    registerNumber: "HRB 12345",
-    responsibleForContent: "Max Mustermann",
-    professionalLiabilityInsurance: {
-      provider: "Allianz Versicherungs-AG",
-      coverage: "Deutschland"
-    }
+    owner: "Jill Flossdorf",
+    taxId: "020 817 61 886", // Steuernummer
+    // vatId: "DE123456789", // Umsatzsteuer-ID
+    responsibleForContent: "Jill Flossdorf",
   },
   
   // Social Media (falls vorhanden)

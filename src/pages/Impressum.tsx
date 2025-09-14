@@ -10,9 +10,6 @@ import {
   ADDRESS_COUNTRY,
   EMERGENCY_PHONE,
   TAX_ID,
-  VAT_ID,
-  REGISTER_COURT,
-  REGISTER_NUMBER,
   RESPONSIBLE_FOR_CONTENT,
   SITE_CONFIG
 } from "@/config/constants";
@@ -50,14 +47,6 @@ export const Impressum = () => {
               <div>
                 <h3 className="font-semibold text-foreground mb-2">Inhaber</h3>
                 <p className="text-muted-foreground">{OWNER}</p>
-              </div>
-              
-              <div>
-                <h3 className="font-semibold text-foreground mb-2">Handelsregister</h3>
-                <p className="text-muted-foreground">
-                  {REGISTER_COURT}<br />
-                  Registernummer: {REGISTER_NUMBER}
-                </p>
               </div>
             </CardContent>
           </Card>
@@ -113,14 +102,6 @@ export const Impressum = () => {
                 <h3 className="font-semibold text-foreground mb-2">Steuernummer</h3>
                 <p className="text-muted-foreground">{TAX_ID}</p>
               </div>
-              
-              <div>
-                <h3 className="font-semibold text-foreground mb-2">Umsatzsteuer-ID</h3>
-                <p className="text-muted-foreground">
-                  Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
-                  {VAT_ID}
-                </p>
-              </div>
             </CardContent>
           </Card>
 
@@ -140,30 +121,6 @@ export const Impressum = () => {
             </CardContent>
           </Card>
 
-          {/* Berufshaftpflichtversicherung */}
-          <Card className="shadow-soft">
-            <CardHeader>
-              <CardTitle className="font-serif text-xl flex items-center">
-                <Scale className="h-5 w-5 mr-2 text-primary" />
-                Berufshaftpflichtversicherung
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div>
-                <h3 className="font-semibold text-foreground mb-2">Versicherungsgesellschaft</h3>
-                <p className="text-muted-foreground">
-                  {SITE_CONFIG.legal.professionalLiabilityInsurance.provider}
-                </p>
-              </div>
-              
-              <div>
-                <h3 className="font-semibold text-foreground mb-2">Geltungsraum</h3>
-                <p className="text-muted-foreground">
-                  {SITE_CONFIG.legal.professionalLiabilityInsurance.coverage}
-                </p>
-              </div>
-            </CardContent>
-          </Card>
 
           {/* Haftungsausschluss */}
           <Card className="shadow-soft">
