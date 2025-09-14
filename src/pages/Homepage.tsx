@@ -132,12 +132,11 @@ export const Homepage = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { title: "Erdbestattung", description: "Traditionelle Beisetzung auf dem Friedhof" },
               { title: "Feuerbestattung", description: "Einäscherung mit verschiedenen Beisetzungsoptionen" },
               { title: "Seebestattung", description: "Beisetzung in Nord- oder Ostsee" },
-              { title: "Naturbestattung", description: "Beisetzung in der freien Natur" }
             ].map((type, index) => (
               <Card key={index} className="text-center shadow-soft hover:shadow-elegant transition-elegant">
                 <CardHeader>

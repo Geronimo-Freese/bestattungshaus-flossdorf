@@ -70,27 +70,6 @@ export const Bestattungsarten = () => {
         "Feierliche Übergabe an das Meer (bis zu 20 Angehörige)"
       ]
     },
-    {
-      id: "naturbestattung",
-      icon: TreePine,
-      title: "Naturbestattung",
-      subtitle: "Ruhe in der freien Natur",
-      description: "Die Urne wird in einem Friedwald oder Ruheforst beigesetzt.",
-      duration: "Ruhezeit: 99 Jahre",
-      price: "ab 2.800€",
-      features: [
-        "Beisetzung an einem Baum",
-        "Natürliche Grabstätte im Wald",
-        "Familien- oder Einzelgräber",
-        "Naturschutz durch Bestattung"
-      ],
-      process: [
-        "Auswahl des Friedwaldes",
-        "Baumauswahl vor Ort",
-        "Trauerfeier im Wald möglich",
-        "Beisetzung an den Wurzeln"
-      ]
-    }
   ];
 
   const cemeteries = [
