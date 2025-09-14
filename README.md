@@ -1,73 +1,135 @@
-# Welcome to your Lovable project
+# Bestattungshaus Website
 
-## Project info
+Eine moderne, responsive Website für ein Bestattungshaus, entwickelt mit React, TypeScript und Tailwind CSS.
 
-**URL**: https://lovable.dev/projects/8df672c8-a85a-40f3-8b3f-8128b6943ca7
+## 🚀 Technologien
 
-## How can I edit this code?
+- **Vite** - Build Tool und Development Server
+- **React 18** - Frontend Framework
+- **TypeScript** - Type Safety
+- **Tailwind CSS** - Styling Framework
+- **shadcn/ui** - UI Component Library
+- **React Router** - Client-side Routing
 
-There are several ways of editing your application.
+## 📋 Entwicklung
 
-**Use Lovable**
+### Voraussetzungen
+- Node.js (empfohlen: Version 18 oder höher)
+- npm oder yarn
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/8df672c8-a85a-40f3-8b3f-8128b6943ca7) and start prompting.
+### Lokale Entwicklung starten
 
-Changes made via Lovable will be committed automatically to this repo.
+```bash
+# Dependencies installieren
+npm install
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Development Server starten
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Die Website ist dann unter `http://localhost:8080` erreichbar.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Verfügbare Scripts
 
-**Use GitHub Codespaces**
+```bash
+npm run dev          # Development Server
+npm run build        # Production Build
+npm run build:dev    # Development Build
+npm run preview      # Preview des Production Builds
+npm run lint         # ESLint ausführen
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🌐 Hosting auf All-inkl.com
 
-## What technologies are used for this project?
+### Automatisches Deployment
 
-This project is built with:
+Für einfache Updates verwenden Sie das bereitgestellte Deployment-Script:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```bash
+./deploy.sh
+```
 
-## How can I deploy this project?
+Dieses Script:
+- Erstellt einen optimierten Production Build
+- Generiert die notwendige `.htaccess`-Datei für React Router
+- Zeigt Ihnen die nächsten Schritte an
 
-Simply open [Lovable](https://lovable.dev/projects/8df672c8-a85a-40f3-8b3f-8128b6943ca7) and click on Share -> Publish.
+### Manueller Upload
 
-## Can I connect a custom domain to my Lovable project?
+#### Schritt 1: Build erstellen
+```bash
+npm run build
+```
 
-Yes, you can!
+#### Schritt 2: Dateien hochladen
+1. **Loggen Sie sich in Ihr All-inkl.com Kundencenter ein**
+2. **Gehen Sie zu "Webspace" → "Dateimanager"**
+3. **Navigieren Sie zum `htdocs` Verzeichnis**
+4. **Laden Sie ALLE Dateien aus dem `dist`-Ordner hoch:**
+   - `index.html`
+   - `assets/` Ordner (mit CSS und JS Dateien)
+   - Alle Bilder (`background.jpg`, `logo.svg`, etc.)
+   - `robots.txt`
+   - `.htaccess`
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+#### Schritt 3: Website testen
+Besuchen Sie Ihre Domain und testen Sie alle Seiten und Funktionen.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+### Wichtige Dateien
+
+- **`.htaccess`** - Ermöglicht korrektes Routing für React Router
+- **`robots.txt`** - SEO-Konfiguration
+- **`favicon.ico`** - Website-Icon
+
+### 🔧 Zusätzliche Konfiguration
+
+#### SSL-Zertifikat aktivieren
+- Gehen Sie zu Ihrem All-inkl.com Kundencenter
+- Aktivieren Sie HTTPS für Ihre Domain
+
+#### Performance-Optimierung
+Die Website ist bereits optimiert mit:
+- Code-Splitting durch Vite
+- Gzip-Kompression
+- Optimierte Asset-Dateien
+
+### 🚨 Wichtige Hinweise
+
+- **Alle Dateien** müssen im `htdocs` Verzeichnis landen
+- Die **`.htaccess`-Datei** ist essentiell für das korrekte Routing
+- **Testen Sie alle Seiten** nach dem Upload
+- **Erstellen Sie regelmäßig Backups** Ihrer Website-Dateien
+
+### 🔄 Updates durchführen
+
+1. Führen Sie Änderungen am Code durch
+2. Führen Sie `./deploy.sh` aus
+3. Laden Sie die neuen Dateien aus dem `dist`-Ordner hoch
+4. Testen Sie die Website
+
+## 📁 Projektstruktur
+
+```
+src/
+├── components/          # Wiederverwendbare Komponenten
+│   ├── ui/             # shadcn/ui Komponenten
+│   ├── Layout.tsx      # Hauptlayout
+│   ├── Navigation.tsx  # Navigation
+│   └── Footer.tsx      # Footer
+├── pages/              # Seiten-Komponenten
+│   ├── Homepage.tsx    # Startseite
+│   ├── Kontakt.tsx     # Kontaktseite
+│   ├── Bestattungsarten.tsx
+│   ├── Kostenrechner.tsx
+│   └── ...
+├── config/             # Konfigurationsdateien
+├── hooks/              # Custom React Hooks
+└── lib/                # Utility-Funktionen
+```
+
+## 🆘 Support
+
+Bei Problemen mit dem Hosting oder der Website:
+1. Überprüfen Sie die Browser-Konsole auf Fehler
+2. Stellen Sie sicher, dass alle Dateien korrekt hochgeladen wurden
+3. Prüfen Sie die `.htaccess`-Datei im `htdocs` Verzeichnis
