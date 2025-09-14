@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Heart, Menu, X, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { EMERGENCY_PHONE } from "@/config/constants";
 
 export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -51,9 +52,11 @@ export const Navigation = () => {
                 {item.label}
               </Link>
             ))}
-            <Button size="sm" className="ml-4">
-              <Phone className="h-4 w-4 mr-2" />
-              24h Notfall
+            <Button size="sm" className="ml-4" asChild>
+              <a href={`tel:${EMERGENCY_PHONE}`}>
+                <Phone className="h-4 w-4 mr-2" />
+                24h Notfall
+              </a>
             </Button>
           </div>
 
@@ -89,9 +92,11 @@ export const Navigation = () => {
                 </Link>
               ))}
               <div className="pt-2">
-                <Button size="sm" className="w-full">
-                  <Phone className="h-4 w-4 mr-2" />
-                  24h Notfall
+                <Button size="sm" className="w-full" asChild>
+                  <a href={`tel:${EMERGENCY_PHONE}`}>
+                    <Phone className="h-4 w-4 mr-2" />
+                    24h Notfall
+                  </a>
                 </Button>
               </div>
             </div>

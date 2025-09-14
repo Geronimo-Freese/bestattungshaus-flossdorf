@@ -5,6 +5,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Phone, Mail, MapPin, Clock, Heart, Send } from "lucide-react";
+import { EMERGENCY_PHONE, ADDRESS_STREET, ADDRESS_CITY, ADDRESS_COUNTRY, EMAIL, WEEKDAYS, SATURDAY, SUNDAY } from "@/config/constants";
 
 export const Kontakt = () => {
   return (
@@ -102,7 +103,7 @@ export const Kontakt = () => {
               </CardHeader>
               <CardContent>
                 <div className="text-center">
-                  <p className="text-3xl font-bold text-destructive mb-2">0800 123 456 789</p>
+                  <p className="text-3xl font-bold text-destructive mb-2">{EMERGENCY_PHONE}</p>
                   <p className="text-muted-foreground mb-4">Kostenlos aus allen Netzen</p>
                   <Button variant="destructive" size="lg" className="w-full">
                     <Phone className="mr-2 h-5 w-5" />
@@ -123,7 +124,7 @@ export const Kontakt = () => {
                     <Phone className="h-5 w-5 text-primary mt-1" />
                     <div>
                       <p className="font-semibold">Telefon</p>
-                      <p className="text-muted-foreground">0123 456 789</p>
+                      <p className="text-muted-foreground">{EMERGENCY_PHONE}</p>
                     </div>
                   </div>
                   
@@ -131,7 +132,7 @@ export const Kontakt = () => {
                     <Mail className="h-5 w-5 text-primary mt-1" />
                     <div>
                       <p className="font-semibold">E-Mail</p>
-                      <p className="text-muted-foreground">info@friedlicher-abschied.de</p>
+                      <p className="text-muted-foreground">{EMAIL}</p>
                     </div>
                   </div>
                   
@@ -140,8 +141,8 @@ export const Kontakt = () => {
                     <div>
                       <p className="font-semibold">Adresse</p>
                       <p className="text-muted-foreground">
-                        Musterstraße 123<br />
-                        12345 Musterstadt
+                        {ADDRESS_STREET}<br />
+                        {ADDRESS_CITY}
                       </p>
                     </div>
                   </div>
@@ -151,21 +152,15 @@ export const Kontakt = () => {
                     <div>
                       <p className="font-semibold">Öffnungszeiten</p>
                       <div className="text-muted-foreground space-y-1">
-                        <p>Mo - Fr: 8:00 - 18:00 Uhr</p>
-                        <p>Sa: 9:00 - 14:00 Uhr</p>
-                        <p>So: Nach Vereinbarung</p>
-                        <p className="text-destructive font-medium">Notfall: 24/7</p>
+                        <p className="text-destructive font-medium">Erreichbarkeit: 24/7</p>
+                        <p>{WEEKDAYS}</p>
+                        <p>{SATURDAY}</p>
+                        <p>{SUNDAY}</p>
                       </div>
                     </div>
                   </div>
                 </div>
                 
-                <div className="pt-4 border-t border-border">
-                  <Button variant="outline" className="w-full">
-                    <MapPin className="mr-2 h-4 w-4" />
-                    Route planen
-                  </Button>
-                </div>
               </CardContent>
             </Card>
 
@@ -205,7 +200,7 @@ export const Kontakt = () => {
                   </li>
                   <li className="flex items-center space-x-2">
                     <Heart className="h-4 w-4 text-primary" />
-                    <span>Beratung in mehreren Sprachen</span>
+                    <span>Beratung in mehreren Sprachen (Deutsch, Englisch, Spanisch)</span>
                   </li>
                   <li className="flex items-center space-x-2">
                     <Heart className="h-4 w-4 text-primary" />

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Heart, Phone, Mail, MapPin } from "lucide-react";
+import { EMERGENCY_PHONE, ADDRESS_STREET, ADDRESS_CITY, ADDRESS_COUNTRY, EMAIL } from "@/config/constants";
 
 export const Footer = () => {
   return (
@@ -9,9 +10,16 @@ export const Footer = () => {
           {/* Logo and Description */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <Heart className="h-8 w-8" />
+              <img 
+                src="/logo.svg" 
+                alt="Logo" 
+                className="h-8 w-8 [filter:brightness(0)_saturate(100%)_invert(100%)]"
+                style={{
+                  filter: 'brightness(0) saturate(100%) invert(100%)'
+                }}
+              />
               <span className="font-serif text-xl font-semibold">
-                Friedlicher Abschied
+                Bestattungshaus Flossdorf
               </span>
             </div>
             <p className="text-primary-foreground/80 mb-4">
@@ -22,15 +30,15 @@ export const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
-                <span>24h Notfallnummer: 0800 123 456 789</span>
+                <span>{EMERGENCY_PHONE}</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
-                <span>info@friedlicher-abschied.de</span>
+                <span>{EMAIL}</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4" />
-                <span>Musterstraße 123, 12345 Musterstadt</span>
+                <span>{ADDRESS_STREET}, {ADDRESS_CITY}, {ADDRESS_COUNTRY}</span>
               </div>
             </div>
           </div>
@@ -87,7 +95,7 @@ export const Footer = () => {
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
           <p className="text-primary-foreground/60">
-            © 2024 Friedlicher Abschied Bestattungsinstitut. Alle Rechte vorbehalten.
+            © 2025  Bestattungshaus Flossdorf. Alle Rechte vorbehalten.
           </p>
         </div>
       </div>
