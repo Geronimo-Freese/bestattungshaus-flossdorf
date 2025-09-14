@@ -45,7 +45,7 @@ export const Homepage = () => {
               </Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <Link to="/notfall">
+              <Link to="/kontakt">
                 <Phone className="mr-2 h-5 w-5" />
                 24h Notfall
               </Link>

@@ -56,7 +56,7 @@ export const Navigation = () => {
             <Button size="sm" className="ml-4" asChild>
               <a href={`tel:${EMERGENCY_PHONE}`}>
                 <Phone className="h-4 w-4 mr-2" />
-                24h Notfall
+                24h Telefon
               </a>
             </Button>
           </div>

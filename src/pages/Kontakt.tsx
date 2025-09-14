@@ -22,9 +22,9 @@ export const Kontakt = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <Card className="shadow-soft">
+          <Card className="shadow-soft order-2 lg:order-1">
             <CardHeader>
               <CardTitle className="font-serif text-2xl">Nachricht senden</CardTitle>
               <CardDescription>
@@ -92,7 +92,7 @@ export const Kontakt = () => {
           </Card>
 
           {/* Contact Information */}
-          <div className="space-y-6">
+          <div className="space-y-6 order-1 lg:order-2">
             {/* Emergency Contact */}
             <Card className="border-destructive bg-destructive/5 shadow-soft">
               <CardHeader>
@@ -106,8 +106,10 @@ export const Kontakt = () => {
                   <p className="text-3xl font-bold text-destructive mb-2">{EMERGENCY_PHONE}</p>
                   <p className="text-muted-foreground mb-4">Kostenlos aus allen Netzen</p>
                   <Button variant="destructive" size="lg" className="w-full">
-                    <Phone className="mr-2 h-5 w-5" />
-                    Jetzt anrufen
+                    <a href={`tel:${EMERGENCY_PHONE}`} className="flex items-center justify-center">
+                      <Phone className="mr-2 h-5 w-5" />
+                      Jetzt anrufen
+                    </a>
                   </Button>
                 </div>
               </CardContent>
