@@ -26,6 +26,21 @@ export const SITE_CONFIG = {
   siteName: "Bestattungshaus Flossdorf",
   siteDescription: "Einfühlsame Bestattungsdienstleistungen mit persönlicher Betreuung",
   
+  // Impressum & Rechtliches
+  legal: {
+    companyName: "Bestattungshaus Flossdorf",
+    owner: "Max Mustermann",
+    taxId: "DE123456789", // Steuernummer
+    vatId: "DE123456789", // Umsatzsteuer-ID
+    registerCourt: "Amtsgericht Gießen",
+    registerNumber: "HRB 12345",
+    responsibleForContent: "Max Mustermann",
+    professionalLiabilityInsurance: {
+      provider: "Allianz Versicherungs-AG",
+      coverage: "Deutschland"
+    }
+  },
+  
   // Social Media (falls vorhanden)
   social: {
     facebook: "",
@@ -44,3 +59,12 @@ export const ADDRESS_COUNTRY = SITE_CONFIG.address.country;
 export const WEEKDAYS = SITE_CONFIG.hours.weekdays;
 export const SATURDAY = SITE_CONFIG.hours.saturday;
 export const SUNDAY = SITE_CONFIG.hours.sunday;
+
+// Impressum Konstanten
+export const COMPANY_NAME = SITE_CONFIG.legal.companyName;
+export const OWNER = SITE_CONFIG.legal.owner;
+export const TAX_ID = SITE_CONFIG.legal.taxId;
+export const VAT_ID = SITE_CONFIG.legal.vatId;
+export const REGISTER_COURT = SITE_CONFIG.legal.registerCourt;
+export const REGISTER_NUMBER = SITE_CONFIG.legal.registerNumber;
+export const RESPONSIBLE_FOR_CONTENT = SITE_CONFIG.legal.responsibleForContent;

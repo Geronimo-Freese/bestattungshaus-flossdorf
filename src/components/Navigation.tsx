@@ -16,6 +16,7 @@ export const Navigation = () => {
     { href: "/kostenrechner", label: "Kostenrechner" },
     { href: "/ueber-uns", label: "Über uns" },
     { href: "/kontakt", label: "Kontakt" },
+    { href: "/impressum", label: "Impressum" },
   ];
 
   const isActive = (path: string) => location.pathname === path;

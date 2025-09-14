@@ -187,7 +187,7 @@ export const Bestattungsarten = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" asChild>
                   <Link to="/kontakt">
-                    Beratungstermin vereinbaren
+                  Kontakt aufnehmen
                   </Link>
                 </Button>
                 <Button size="lg" variant="outline" asChild>

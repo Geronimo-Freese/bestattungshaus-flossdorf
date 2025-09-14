@@ -10,6 +10,7 @@ import { Bestattungsarten } from "./pages/Bestattungsarten";
 import { Kostenrechner } from "./pages/Kostenrechner";
 import { UeberUns } from "./pages/UeberUns";
 import { Kontakt } from "./pages/Kontakt";
+import { Impressum } from "./pages/Impressum";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
             <Route path="/kostenrechner" element={<Kostenrechner />} />
             <Route path="/ueber-uns" element={<UeberUns />} />
             <Route path="/kontakt" element={<Kontakt />} />
+            <Route path="/impressum" element={<Impressum />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
