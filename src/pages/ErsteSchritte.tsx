@@ -1,51 +1,63 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Phone, FileText, Clock, Heart, AlertCircle } from "lucide-react";
+import { CheckCircle, Phone, FileText, Clock, Heart, AlertCircle, Cross } from "lucide-react";
 import { Link } from "react-router-dom";
+import { EMERGENCY_PHONE } from "@/config/constants";
 
 export const ErsteSchritte = () => {
   const steps = [
     {
       icon: Phone,
-      title: "1. Sofortige Kontaktaufnahme",
-      description: "Rufen Sie uns sofort an oder lassen Sie uns zu Ihnen kommen",
+      title: "1. Kontaktaufnahme",
+      description: "Rufen Sie uns an und erhalten Sie eine unverbindliche und kostenlose erste Beratung",
       details: [
-        "24h Notfalltelefon: 0800 123 456 789",
-        "Hausbesuch innerhalb einer Stunde",
-        "Erste Beratung kostenlos und unverbindlich"
+        "Kontaktaufnahme mit unserem Team - Besprechung der folgenden Punkte:",
+        "Im Falle eines Sterbefalls zuhause: Informieren des Hausarztes oder des Ärztlichen Bereitschaftsdienstes (ÄBD)",
+        "Vorbereitung der Überführung Ihres Angehörigen",
+        "Vereinbarung einer vollumfänglichen Trauerberatung für den Folgetag",
       ]
     },
     {
       icon: FileText,
-      title: "2. Wichtige Dokumente",
+      title: "2. Wichtige Dokumente und Vorbereitung der Trauerberatung",
       description: "Wir helfen bei der Beschaffung aller notwendigen Unterlagen",
       details: [
-        "Personalausweis des Verstorbenen",
-        "Sterbeurkunde vom Standesamt",
-        "Krankenversicherungsnachweis",
-        "Bestattungsverfügung (falls vorhanden)"
+        "Personalausweis oder Meldebescheinigung des Verstorbenen",
+        "Optional: Stammbuch, Heiratsurkunde, Scheidungsurkunde, Sterbeurkunde des Ehepartners, Krankenversicherungskarte",
+        "Klärung, ob Wünsche bezüglich der Beisetzung vom Verstorbenen schriftlich festgehalten wurden",
+        "Ausfüllen der Bestattungsvollmacht"
       ]
     },
     {
       icon: Heart,
-      title: "3. Bestattungsart wählen",
+      title: "3. Das Trauergespräch",
       description: "Gemeinsam finden wir die passende Form des Abschieds",
       details: [
-        "Erdbestattung oder Feuerbestattung",
-        "Auswahl des Friedhofs",
-        "Sarg- oder Urnenauswahl",
-        "Gestaltung der Trauerfeier"
+        "Auswahl der Bestattungsart, des Friedhofs, des Sarges",
+        "Auswahl des Beisetzungstermins und der Gäste",
+        "Gestaltung der Beisetzung (Dekoration, Musik, Redner)",
+        "Klärung aller wichtigen Informationen",
+        "Vorbereitung der amtlichen Beurkundung für die Herausgabe von Sterbeurkunden (für erbrechtliche Belange)"
       ]
     },
     {
       icon: Clock,
-      title: "4. Ablauf planen",
+      title: "4. Ablauf der Beisetzung",
       description: "Wir organisieren alle Details für Sie",
       details: [
-        "Terminkoordination mit Friedhof",
-        "Blumenschmuck und Dekoration",
-        "Musik und Redner organisieren",
-        "Trauerkarten und Anzeigen"
+        "Frühzeitiges Treffen am Beisetzungsort und Koordination mit Pfarrer/Trauerredner und Friedhofsmitarbeitern",
+        "Beisetzung Ihres Angehörigen nach Ihren Vorstellungen",
+        "Anschließender Trauerschmaus und gemeinsames Erinnern (optional)"
+      ]
+    },
+    {
+      icon: Cross,
+      title: "5. Abschluss der Formalitäten",
+      description: "Gemeinsamen Abschluss finden",
+      details: [
+        "Überreichen der Beisetzungsurkunde",
+        "Überreichen eventuell verbleibender Unterlagen",
+        "Finanzieller Abschluss"
       ]
     }
   ];
@@ -77,12 +89,14 @@ export const ErsteSchritte = () => {
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div>
                 <p className="text-lg font-semibold mb-2">24h Notfallnummer</p>
-                <p className="text-3xl font-bold text-destructive">0800 123 456 789</p>
+                <p className="text-3xl font-bold text-destructive">{EMERGENCY_PHONE}</p>
                 <p className="text-muted-foreground">Kostenlos aus dem deutschen Festnetz und Mobilfunk</p>
               </div>
               <Button size="lg" variant="destructive">
-                <Phone className="mr-2 h-5 w-5" />
-                Jetzt anrufen
+                <a href={`tel:${EMERGENCY_PHONE}`} className="flex items-center justify-center">
+                  <Phone className="mr-2 h-5 w-5" />
+                  Jetzt anrufen
+                </a>
               </Button>
             </div>
           </CardContent>
@@ -136,10 +150,6 @@ export const ErsteSchritte = () => {
                 <li className="flex items-start space-x-2">
                   <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                   <span>Wir organisieren auch kurzfristige Bestattungen</span>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span>Trauerbegleitung und psychologische Unterstützung verfügbar</span>
                 </li>
               </ul>
             </CardContent>

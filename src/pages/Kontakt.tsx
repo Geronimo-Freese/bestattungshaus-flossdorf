@@ -134,7 +134,11 @@ export const Kontakt = () => {
                     <Mail className="h-5 w-5 text-primary mt-1" />
                     <div>
                       <p className="font-semibold">E-Mail</p>
-                      <p className="text-muted-foreground">{EMAIL}</p>
+                      <p className="text-muted-foreground">
+                        <a href={`mailto:${EMAIL}`} className="hover:underline">
+                          {EMAIL}
+                        </a>
+                      </p>
                     </div>
                   </div>
                   

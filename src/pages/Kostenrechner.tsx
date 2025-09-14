@@ -8,6 +8,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Separator } from "@/components/ui/separator";
 import { Calculator, Euro, FileText, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
+import { EMERGENCY_PHONE } from "@/config/constants";
 
 export const Kostenrechner = () => {
   const [calculation, setCalculation] = useState({
@@ -366,10 +367,10 @@ export const Kostenrechner = () => {
                         </Link>
                       </Button>
                       <Button variant="outline" className="w-full" asChild>
-                        <Link to="/erste-schritte">
+                        <a href={`tel:${EMERGENCY_PHONE}`} className="flex items-center justify-center">
                           <Phone className="mr-2 h-4 w-4" />
                           Sofortberatung
-                        </Link>
+                        </a>
                       </Button>
                     </div>
                   </div>
