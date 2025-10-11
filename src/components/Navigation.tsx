@@ -16,7 +16,6 @@ export const Navigation = () => {
     { href: "/kostenrechner", label: "Kostenrechner" },
     { href: "/ueber-uns", label: "Über uns" },
     { href: "/kontakt", label: "Kontakt" },
-    { href: "/impressum", label: "Impressum" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -29,7 +28,7 @@ export const Navigation = () => {
           <Link to="/" className="flex items-center">
             <img 
               src="/logo_name.svg" 
-              alt="Friedlicher Abschied" 
+              alt="Bestattungshaus Flossdorf" 
               className="h-12 w-auto [filter:brightness(0)_saturate(100%)_invert(40%)_sepia(80%)_saturate(200%)_hue-rotate(60deg)]"
               style={{
                 filter: 'brightness(0) saturate(100%) invert(40%) sepia(80%) saturate(200%) hue-rotate(60deg)'

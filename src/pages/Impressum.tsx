@@ -158,24 +158,6 @@ export const Impressum = () => {
             </CardContent>
           </Card>
 
-          {/* Datenschutz */}
-          <Card className="shadow-soft">
-            <CardHeader>
-              <CardTitle className="font-serif text-xl">Datenschutz</CardTitle>
-            </CardHeader>
-            <CardContent className="text-sm text-muted-foreground">
-              <p>
-                Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf 
-                unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder eMail-Adressen) erhoben werden, 
-                erfolgt dies, soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche 
-                Zustimmung nicht an Dritte weitergegeben.
-              </p>
-              <p className="mt-4">
-                Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) 
-                Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.
-              </p>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </div>
