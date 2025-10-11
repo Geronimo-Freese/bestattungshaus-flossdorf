@@ -10,7 +10,7 @@ interface LayoutProps {
 
 export const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className="min-h-screen bg-gradient-background">
+    <div className="min-h-screen bg-gradient-background flex flex-col">
       <ScrollToTop />
       <Navigation />
       <main className="flex-1">
