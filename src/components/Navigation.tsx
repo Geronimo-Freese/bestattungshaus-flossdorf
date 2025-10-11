@@ -43,16 +43,16 @@ export const Navigation = () => {
                 key={item.href}
                 to={item.href}
                 className={cn(
-                  "px-3 py-2 rounded-md text-sm font-medium transition-elegant",
+                  "px-3 py-2 rounded-md text-sm font-medium transition-smooth transform hover:scale-105",
                   isActive(item.href)
-                    ? "bg-primary text-primary-foreground"
-                    : "text-foreground hover:bg-accent hover:text-accent-foreground"
+                    ? "bg-primary text-primary-foreground shadow-sm"
+                    : "text-foreground hover:bg-accent hover:text-accent-foreground hover:shadow-sm"
                 )}
               >
                 {item.label}
               </Link>
             ))}
-            <Button size="sm" className="ml-4" asChild>
+            <Button size="sm" className="ml-4 transition-smooth transform hover:scale-105" asChild>
               <a href={`tel:${EMERGENCY_PHONE}`}>
                 <Phone className="h-4 w-4 mr-2" />
                 24h Telefon
@@ -81,10 +81,10 @@ export const Navigation = () => {
                   key={item.href}
                   to={item.href}
                   className={cn(
-                    "block px-3 py-2 rounded-md text-base font-medium transition-elegant",
+                    "block px-3 py-2 rounded-md text-base font-medium transition-smooth transform hover:scale-105",
                     isActive(item.href)
-                      ? "bg-primary text-primary-foreground"
-                      : "text-foreground hover:bg-accent hover:text-accent-foreground"
+                      ? "bg-primary text-primary-foreground shadow-sm"
+                      : "text-foreground hover:bg-accent hover:text-accent-foreground hover:shadow-sm"
                   )}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -92,7 +92,7 @@ export const Navigation = () => {
                 </Link>
               ))}
               <div className="pt-2">
-                <Button size="sm" className="w-full" asChild>
+                <Button size="sm" className="w-full transition-smooth transform hover:scale-105" asChild>
                   <a href={`tel:${EMERGENCY_PHONE}`}>
                     <Phone className="h-4 w-4 mr-2" />
                     24h Notfall

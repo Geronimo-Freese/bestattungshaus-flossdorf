@@ -5,15 +5,21 @@ export const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    // Scroll to top when route changes
-    // Use setTimeout to ensure the page has rendered
-    setTimeout(() => {
+    // Smooth scroll to top when route changes
+    const scrollToTop = () => {
       window.scrollTo({
         top: 0,
         left: 0,
         behavior: "smooth",
       });
-    }, 0);
+    };
+
+    // Use requestAnimationFrame for better performance
+    const timeoutId = setTimeout(() => {
+      requestAnimationFrame(scrollToTop);
+    }, 50); // Slightly longer delay for better UX
+
+    return () => clearTimeout(timeoutId);
   }, [pathname]);
 
   return null;

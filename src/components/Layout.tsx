@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import { Navigation } from "./Navigation";
 import { Footer } from "./Footer";
 import { ScrollToTop } from "./ScrollToTop";
+import { PageTransition } from "./PageTransition";
 
 interface LayoutProps {
   children: ReactNode;
@@ -13,7 +14,9 @@ export const Layout = ({ children }: LayoutProps) => {
       <ScrollToTop />
       <Navigation />
       <main className="flex-1">
-        {children}
+        <PageTransition>
+          {children}
+        </PageTransition>
       </main>
       <Footer />
     </div>
