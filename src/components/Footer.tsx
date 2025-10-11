@@ -84,11 +84,13 @@ export const Footer = () => {
                   Datenschutz
                 </Link>
               </li>
+              {/*
               <li>
                 <Link to="/agb" className="text-primary-foreground/80 hover:text-primary-foreground transition-elegant">
                   AGB
                 </Link>
               </li>
+              */}
             </ul>
           </div>
         </div>
