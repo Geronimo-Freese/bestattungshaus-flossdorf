@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -8,6 +9,49 @@ import { Phone, Mail, MapPin, Clock, Heart, Send, House } from "lucide-react";
 import { EMERGENCY_PHONE, ADDRESS_STREET, ADDRESS_CITY, ADDRESS_COUNTRY, EMAIL, WEEKDAYS, SATURDAY, SUNDAY } from "@/config/constants";
 
 export const Kontakt = () => {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+  });
+
+  const handleInputChange = (field: string, value: string) => {
+    setFormData(prev => ({
+      ...prev,
+      [field]: value
+    }));
+  };
+
+  const handleSendEmail = () => {
+    const { firstName, lastName, email, phone, subject, message } = formData;
+    
+    // E-Mail Betreff
+    const emailSubject = `Kontaktanfrage: ${subject || 'Allgemeine Anfrage'}`;
+    
+    // E-Mail Body mit allen Informationen
+    const emailBody = `Sehr geehrte Damen und Herren,
+
+${message}
+
+---
+Kontaktdaten:
+Name: ${firstName} ${lastName}
+E-Mail: ${email}
+Telefon: ${phone}
+
+Mit freundlichen Grüßen
+${firstName} ${lastName}`;
+
+    // E-Mail-Link erstellen
+    const mailtoLink = `mailto:${EMAIL}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+    
+    // E-Mail-App öffnen
+    window.location.href = mailtoLink;
+  };
+
   return (
     <div className="py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
@@ -35,37 +79,59 @@ export const Kontakt = () => {
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="firstName">Vorname</Label>
-                  <Input id="firstName" placeholder="Ihr Vorname" />
+                  <Input 
+                    id="firstName" 
+                    placeholder="Ihr Vorname" 
+                    value={formData.firstName}
+                    onChange={(e) => handleInputChange('firstName', e.target.value)}
+                  />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="lastName">Nachname</Label>
-                  <Input id="lastName" placeholder="Ihr Nachname" />
+                  <Input 
+                    id="lastName" 
+                    placeholder="Ihr Nachname" 
+                    value={formData.lastName}
+                    onChange={(e) => handleInputChange('lastName', e.target.value)}
+                  />
                 </div>
               </div>
               
               <div className="space-y-2">
                 <Label htmlFor="email">E-Mail-Adresse</Label>
-                <Input id="email" type="email" placeholder="ihre.email@beispiel.de" />
+                <Input 
+                  id="email" 
+                  type="email" 
+                  placeholder="ihre.email@beispiel.de" 
+                  value={formData.email}
+                  onChange={(e) => handleInputChange('email', e.target.value)}
+                />
               </div>
               
               <div className="space-y-2">
                 <Label htmlFor="phone">Telefonnummer</Label>
-                <Input id="phone" type="tel" placeholder="0123 456789" />
+                <Input 
+                  id="phone" 
+                  type="tel" 
+                  placeholder="0123 456789" 
+                  value={formData.phone}
+                  onChange={(e) => handleInputChange('phone', e.target.value)}
+                />
               </div>
               
               <div className="space-y-2">
                 <Label htmlFor="subject">Betreff</Label>
-                <Select>
+                <Select onValueChange={(value) => handleInputChange('subject', value)}>
                   <SelectTrigger>
                     <SelectValue placeholder="Thema auswählen" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="beratung">Allgemeine Beratung</SelectItem>
-                    <SelectItem value="trauerfall">Akuter Trauerfall</SelectItem>
-                    <SelectItem value="vorsorge">Bestattungsvorsorge</SelectItem>
-                    <SelectItem value="kosten">Kostenanfrage</SelectItem>
-                    <SelectItem value="termin">Terminvereinbarung</SelectItem>
-                    <SelectItem value="sonstiges">Sonstiges</SelectItem>
+                    <SelectItem value="Allgemeine Beratung">Allgemeine Beratung</SelectItem>
+                    <SelectItem value="Akuter Trauerfall">Akuter Trauerfall</SelectItem>
+                    <SelectItem value="Bestattungsvorsorge">Bestattungsvorsorge</SelectItem>
+                    <SelectItem value="Kostenanfrage">Kostenanfrage</SelectItem>
+                    <SelectItem value="Terminvereinbarung">Terminvereinbarung</SelectItem>
+                    <SelectItem value="Sonstiges">Sonstiges</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -76,10 +142,12 @@ export const Kontakt = () => {
                   id="message" 
                   placeholder="Beschreiben Sie uns Ihr Anliegen..." 
                   className="min-h-[120px]"
+                  value={formData.message}
+                  onChange={(e) => handleInputChange('message', e.target.value)}
                 />
               </div>
               
-              <Button className="w-full" size="lg">
+              <Button className="w-full" size="lg" onClick={handleSendEmail}>
                 <Send className="mr-2 h-5 w-5" />
                 Nachricht senden
               </Button>
