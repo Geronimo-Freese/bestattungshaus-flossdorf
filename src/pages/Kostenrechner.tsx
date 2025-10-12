@@ -140,28 +140,6 @@ export const Kostenrechner = () => {
               </CardContent>
             </Card>
 
-            <Card className="shadow-soft">
-              <CardHeader>
-                <CardTitle className="font-serif text-xl">Friedhof</CardTitle>
-                <CardDescription>Auswahl des Friedhofs (nur bei Erd- und Feuerbestattung)</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <Select 
-                  value={calculation.cemetery} 
-                  onValueChange={(value) => setCalculation({...calculation, cemetery: value})}
-                  disabled={["seebestattung", "naturbestattung"].includes(calculation.burialType)}
-                >
-                  <SelectTrigger>
-                    <SelectValue placeholder="Friedhof auswählen" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="hauptfriedhof">Hauptfriedhof Musterstadt (600€)</SelectItem>
-                    <SelectItem value="waldfriedhof">Waldfriedhof Grünberg (800€)</SelectItem>
-                    <SelectItem value="kirchhof">St. Marien Kirchhof (700€)</SelectItem>
-                  </SelectContent>
-                </Select>
-              </CardContent>
-            </Card>
 
             <Card className="shadow-soft">
               <CardHeader>
