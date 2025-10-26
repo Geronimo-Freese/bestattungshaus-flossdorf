@@ -84,16 +84,13 @@ export const UeberUns = () => {
                 </h2>
                 <div className="space-y-4 text-muted-foreground">
                   <p>
-                    Seit über fünf Jahren begleite ich Angehörige in einer besonders sensiblen Lebenssituation – beim Abschied von einem geliebten Menschen. Die Begleitung trauernder Familien ist für mich nicht nur ein Beruf, sondern eine verantwortungsvolle Aufgabe, der ich mich mit großer Sorgfalt und persönlichem Engagement widme.
+                    Seit über fünf Jahren begleite ich Angehörige in einer besonders sensiblen Lebenssituation: beim Abschied von einem geliebten Menschen. Die Begleitung trauernder Familien ist für mich nicht nur ein Beruf, sondern eine verantwortungsvolle Aufgabe, der ich mich mit großer Sorgfalt und persönlichem Engagement widme. Da ich im Wetteraukreis aufgewachsen bin und meine Familie hier verwurzelt ist, liegt mir die Verbundenheit zu dieser Region besonders am Herzen.
                   </p>
                   <p>
-                    In unserem Familienunternehmen legen wir besonderen Wert auf Vertrauenswürdigkeit und Transparenz. Wir wissen, dass in Momenten der Trauer nicht nur emotionale, sondern auch organisatorische und finanzielle Fragen eine große Rolle spielen. Deshalb garantieren wir Ihnen klare Abläufe, offene Kommunikation und absolute Kostentransparenz – vom ersten Gespräch bis zur Durchführung der Bestattung.
+                    Auf meiner Website lege ich besonderen Wert auf Vertrauenswürdigkeit und Transparenz. Mir ist bewusst, dass in Momenten der Trauer neben emotionalen auch organisatorische und finanzielle Fragen eine große Rolle spielen. Deshalb garantieren wir Ihnen klare Abläufe, offene Kommunikation und absolute Kostentransparenz – vom ersten Gespräch bis zur Durchführung der Bestattung.
                   </p>
                   <p>
-                    Es ist uns ein Herzensanliegen, dass Sie sich in dieser schweren Zeit gut aufgehoben fühlen. Wir begleiten Sie mit Würde, Mitgefühl und dem tiefen Respekt für die Einzigartigkeit jedes Lebens.
-                  </p>
-                  <p>
-                    Sprechen Sie uns an – wir sind für Sie da, wann immer Sie uns brauchen.
+                    Es ist mir ein Herzensanliegen, dass Sie sich in dieser schweren Zeit gut aufgehoben fühlen. Wir begleiten Sie mit Würde, Mitgefühl und dem tiefen Respekt vor der Einzigartigkeit jedes Lebens.
                   </p>
                 </div>
               </div>
