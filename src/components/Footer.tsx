@@ -22,11 +22,6 @@ export const Footer = () => {
                 Bestattungshaus Floßdorf
               </span>
             </div>
-            <p className="text-primary-foreground/80 mb-4">
-              Wir begleiten Sie einfühlsam durch schwere Stunden und helfen dabei, 
-              einen würdevollen Abschied zu gestalten. Mit Respekt, Verständnis und 
-              jahrelanger Erfahrung stehen wir Ihnen zur Seite.
-            </p>
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />

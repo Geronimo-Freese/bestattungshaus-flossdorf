@@ -173,7 +173,7 @@ ${firstName} ${lastName}`;
               <CardContent>
                 <div className="text-center">
                   <p className="text-3xl font-bold text-destructive mb-2">{EMERGENCY_PHONE}</p>
-                  <p className="text-muted-foreground mb-4">Kostenlos aus allen Netzen</p>
+                  <p className="text-destructive mb-4">Kostenlos aus allen Netzen</p>
                   <Button 
                     variant="destructive" 
                     size="lg" 
