@@ -11,7 +11,8 @@ import {
   EMERGENCY_PHONE,
   TAX_ID,
   RESPONSIBLE_FOR_CONTENT,
-  SITE_CONFIG
+  SITE_CONFIG,
+  VAT_ID
 } from "@/config/constants";
 
 export const Impressum = () => {
@@ -101,6 +102,12 @@ export const Impressum = () => {
               <div>
                 <h3 className="font-semibold text-foreground mb-2">Steuernummer</h3>
                 <p className="text-muted-foreground">{TAX_ID}</p>
+              </div>
+            </CardContent>
+            <CardContent className="space-y-4">
+              <div>
+                <h3 className="font-semibold text-foreground mb-2">USt-IdNr.</h3>
+                <p className="text-muted-foreground">{VAT_ID}</p>
               </div>
             </CardContent>
           </Card>

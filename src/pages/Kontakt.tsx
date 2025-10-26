@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Phone, Mail, MapPin, Clock, Heart, Send, House } from "lucide-react";
 import { EMERGENCY_PHONE, ADDRESS_STREET, ADDRESS_CITY, ADDRESS_COUNTRY, EMAIL, WEEKDAYS, SATURDAY, SUNDAY } from "@/config/constants";
+import { ServiceAreaMap } from "@/components/ServiceAreaMap";
 
 export const Kontakt = () => {
   const [formData, setFormData] = useState({
@@ -190,13 +191,6 @@ ${firstName} ${lastName}`;
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <Phone className="h-5 w-5 text-primary mt-1" />
-                    <div>
-                      <p className="font-semibold">Telefon</p>
-                      <p className="text-muted-foreground">{EMERGENCY_PHONE}</p>
-                    </div>
-                  </div>
                   
                   <div className="flex items-start space-x-3">
                     <Mail className="h-5 w-5 text-primary mt-1" />
@@ -210,16 +204,6 @@ ${firstName} ${lastName}`;
                     </div>
                   </div>
                   
-                  <div className="flex items-start space-x-3">
-                    <MapPin className="h-5 w-5 text-primary mt-1" />
-                    <div>
-                      <p className="font-semibold">Adresse</p>
-                      <p className="text-muted-foreground">
-                        {ADDRESS_STREET}<br />
-                        {ADDRESS_CITY}
-                      </p>
-                    </div>
-                  </div>
 
                   <div className="flex items-start space-x-3">
                     <Clock className="h-5 w-5 text-primary mt-1" />
@@ -253,49 +237,14 @@ ${firstName} ${lastName}`;
                 <CardTitle className="font-serif text-xl">Unser Einzugsgebiet</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground mb-4">
-                  Wir sind in folgenden Städten und Gemeinden für Sie da:
-                </p>
-                <div className="grid grid-cols-2 gap-2 text-sm">
-                  <div>• Musterstadt</div>
-                  <div>• Beispielort</div>
-                  <div>• Dorfhausen</div>
-                  <div>• Testheim</div>
-                  <div>• Musterdorf</div>
-                  <div>• Beispielberg</div>
-                </div>
-                <p className="text-xs text-muted-foreground mt-4">
-                  Auch außerhalb unseres Haupteinzugsgebietes stehen wir Ihnen gerne zur Verfügung.
+                <ServiceAreaMap className="mb-4" />
+                <p className="text-sm text-muted-foreground text-center">
+                  Wir sind in beiden Landkreisen für Sie da – auch außerhalb unseres 
+                  Haupteinzugsgebietes stehen wir Ihnen gerne zur Verfügung.
                 </p>
               </CardContent>
             </Card>
 
-            {/* Additional Services */}
-            <Card className="shadow-soft">
-              <CardHeader>
-                <CardTitle className="font-serif text-xl">Zusätzliche Services</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li className="flex items-center space-x-2">
-                    <Heart className="h-4 w-4 text-primary" />
-                    <span>Hausbesuche möglich</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <Heart className="h-4 w-4 text-primary" />
-                    <span>Beratung in mehreren Sprachen (Deutsch, Englisch, Spanisch)</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <Heart className="h-4 w-4 text-primary" />
-                    <span>Abholung deutschlandweit</span>
-                  </li>
-                  <li className="flex items-center space-x-2">
-                    <Heart className="h-4 w-4 text-primary" />
-                    <span>Überführungen ins Ausland</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </div>
