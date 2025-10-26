@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Heart, Clock, Shield, Phone, ChevronRight, Calculator } from "lucide-react";
 import { Link } from "react-router-dom";
+import { EMERGENCY_PHONE } from "@/config/constants";
 
 export const Homepage = () => {
   return (
@@ -87,7 +88,10 @@ export const Homepage = () => {
               </CardHeader>
               <CardContent>
                 <Button variant="outline" size="sm" asChild>
-                  <Link to="/notfall">Notfall-Kontakt</Link>
+                  <a href={`tel:${EMERGENCY_PHONE}`}>
+                    <Phone className="h-4 w-4 mr-2" />
+                    Notfall-Kontakt
+                  </a>
                 </Button>
               </CardContent>
             </Card>

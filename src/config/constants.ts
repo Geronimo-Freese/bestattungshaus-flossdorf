@@ -29,7 +29,7 @@ export const SITE_CONFIG = {
   // Impressum & Rechtliches
   legal: {
     companyName: "Bestattungshaus Floßdorf",
-    owner: "Jill Flossdorf",
+    owner: "Jill Floßdorf",
     taxId: "020 817 61 886", // Steuernummer
     vatId: "DE455232575", // Umsatzsteuer-ID
     responsibleForContent: "Jill Floßdorf",

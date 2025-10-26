@@ -62,11 +62,6 @@ export const Footer = () => {
                   Kostenrechner
                 </Link>
               </li>
-              <li>
-                <Link to="/notfall" className="text-primary-foreground/80 hover:text-primary-foreground transition-elegant">
-                  Notfall
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -97,7 +92,7 @@ export const Footer = () => {
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
           <p className="text-primary-foreground/60">
-            © 2025  Bestattungshaus Flossdorf. Alle Rechte vorbehalten.
+            © 2025  Bestattungshaus Floßdorf. Alle Rechte vorbehalten.
           </p>
         </div>
       </div>
