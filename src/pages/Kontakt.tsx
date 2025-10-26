@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Phone, Mail, MapPin, Clock, Heart, Send, House } from "lucide-react";
 import { EMERGENCY_PHONE, ADDRESS_STREET, ADDRESS_CITY, ADDRESS_COUNTRY, EMAIL, WEEKDAYS, SATURDAY, SUNDAY } from "@/config/constants";
+import { ServiceAreaMap } from "@/components/ServiceAreaMap";
 
 export const Kontakt = () => {
   const [formData, setFormData] = useState({
@@ -236,19 +237,10 @@ ${firstName} ${lastName}`;
                 <CardTitle className="font-serif text-xl">Unser Einzugsgebiet</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground mb-4">
-                  Wir sind in folgenden Städten und Gemeinden für Sie da:
-                </p>
-                <div className="grid grid-cols-2 gap-2 text-sm">
-                  <div>• Musterstadt</div>
-                  <div>• Beispielort</div>
-                  <div>• Dorfhausen</div>
-                  <div>• Testheim</div>
-                  <div>• Musterdorf</div>
-                  <div>• Beispielberg</div>
-                </div>
-                <p className="text-xs text-muted-foreground mt-4">
-                  Auch außerhalb unseres Haupteinzugsgebietes stehen wir Ihnen gerne zur Verfügung.
+                <ServiceAreaMap className="mb-4" />
+                <p className="text-sm text-muted-foreground text-center">
+                  Wir sind in beiden Landkreisen für Sie da – auch außerhalb unseres 
+                  Haupteinzugsgebietes stehen wir Ihnen gerne zur Verfügung.
                 </p>
               </CardContent>
             </Card>
