@@ -5,47 +5,18 @@ import { Heart, Users, Clock, Award, Phone, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export const UeberUns = () => {
-  const team = [
-    {
-      name: "Maria Schneider",
-      role: "Geschäftsführerin & Bestatterin",
-      experience: "25 Jahre Erfahrung",
-      specialties: ["Trauerbegleitung", "Bestattungsplanung", "Angehörigenbetreuung"],
-      description: "Mit Leidenschaft und Einfühlungsvermögen begleite ich Familien seit über zwei Jahrzehnten durch schwere Stunden."
-    },
-    {
-      name: "Thomas Weber", 
-      role: "Bestatter & Trauerredner",
-      experience: "18 Jahre Erfahrung",
-      specialties: ["Trauerreden", "Bestattungsorganisation", "Friedhofskoordination"],
-      description: "Als ausgebildeter Trauerredner gestalte ich würdevolle Abschiedsfeiern, die das Leben des Verstorbenen ehren."
-    },
-    {
-      name: "Sarah Klein",
-      role: "Trauerbegleiterin",
-      experience: "12 Jahre Erfahrung", 
-      specialties: ["Psychologische Betreuung", "Kindergruppenbegleitung", "Krisenintervention"],
-      description: "Ich unterstütze Trauernde dabei, ihren eigenen Weg durch die Trauer zu finden und neue Kraft zu schöpfen."
-    },
-    {
-      name: "Michael König",
-      role: "Bestattungsvorsorge",
-      experience: "15 Jahre Erfahrung",
-      specialties: ["Bestattungsvorsorge", "Vertragsberatung", "Finanzplanung"],
-      description: "Ich berate Sie umfassend bei der Bestattungsvorsorge, damit Sie und Ihre Angehörigen abgesichert sind."
-    }
-  ];
+  
 
   const values = [
     {
       icon: Heart,
       title: "Menschlichkeit",
-      description: "Wir begegnen jedem Menschen mit Respekt, Würde und Verständnis für ihre individuelle Situation."
+      description: "Mit Herz und Verständnis begleiten wir Sie."
     },
     {
       icon: Users,
       title: "Familiäre Betreuung",
-      description: "Als Familienbetrieb in dritter Generation pflegen wir persönliche Beziehungen zu unseren Familien."
+      description: "Familiär, vertraut und fürsorglich."
     },
     {
       icon: Clock,
@@ -55,7 +26,7 @@ export const UeberUns = () => {
     {
       icon: Award,
       title: "Qualität",
-      description: "Höchste Standards in der Ausbildung und kontinuierliche Weiterbildung unseres Teams."
+      description: "Echte Qualität schafft bleibende Erinnerungen."
     }
   ];
 
