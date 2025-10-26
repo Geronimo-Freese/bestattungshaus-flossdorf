@@ -12,6 +12,7 @@ import { UeberUns } from "./pages/UeberUns";
 import { Kontakt } from "./pages/Kontakt";
 import { Impressum } from "./pages/Impressum";
 import { Datenschutz } from "./pages/Datenschutz";
+import { UnderConstruction } from "./pages/UnderConstruction";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,7 +28,7 @@ const App = () => (
             <Route path="/" element={<Homepage />} />
             <Route path="/erste-schritte" element={<ErsteSchritte />} />
             <Route path="/bestattungsarten" element={<Bestattungsarten />} />
-            <Route path="/kostenrechner" element={<Kostenrechner />} />
+            <Route path="/kostenrechner" element={<UnderConstruction />} />
             <Route path="/ueber-uns" element={<UeberUns />} />
             <Route path="/kontakt" element={<Kontakt />} />
             <Route path="/impressum" element={<Impressum />} />

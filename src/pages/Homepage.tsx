@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Heart, Clock, Shield, Phone, ChevronRight, Calculator } from "lucide-react";
 import { Link } from "react-router-dom";
+import { EMERGENCY_PHONE } from "@/config/constants";
 
 export const Homepage = () => {
   return (
@@ -14,14 +15,6 @@ export const Homepage = () => {
         {/* Content mit höherem z-index */}
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <div className="mb-8">
-            <img 
-              src="/logo.svg" 
-              alt="Logo" 
-              className="h-16 w-auto mx-auto mb-6 [filter:brightness(0)_saturate(100%)_invert(40%)_sepia(80%)_saturate(200%)_hue-rotate(60deg)]"
-              style={{
-                filter: 'brightness(0) saturate(100%) invert(40%) sepia(80%) saturate(200%) hue-rotate(60deg)'
-              }}
-            />
           </div>
           <h1 className="font-serif text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">
             In schweren Stunden<br />
@@ -32,7 +25,7 @@ export const Homepage = () => {
             würdevollen Bestattung. Mit Respekt, Verständnis und jahrelanger Erfahrung.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild>
+            <Button size="lg"  variant="outline" asChild>
               <Link to="/erste-schritte">
                 Erste Schritte
                 <ChevronRight className="ml-2 h-5 w-5" />
@@ -95,7 +88,10 @@ export const Homepage = () => {
               </CardHeader>
               <CardContent>
                 <Button variant="outline" size="sm" asChild>
-                  <Link to="/notfall">Notfall-Kontakt</Link>
+                  <a href={`tel:${EMERGENCY_PHONE}`}>
+                    <Phone className="h-4 w-4 mr-2" />
+                    Notfall-Kontakt
+                  </a>
                 </Button>
               </CardContent>
             </Card>
@@ -115,43 +111,6 @@ export const Homepage = () => {
                 </Button>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Bestattungsarten Overview */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="font-serif text-3xl font-bold text-foreground mb-4">
-              Bestattungsarten
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Jeder Abschied ist individuell. Wir bieten verschiedene Bestattungsformen, 
-              die den Wünschen des Verstorbenen und der Angehörigen entsprechen.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { title: "Erdbestattung", description: "Traditionelle Beisetzung auf dem Friedhof" },
-              { title: "Feuerbestattung", description: "Einäscherung mit verschiedenen Beisetzungsoptionen" },
-              { title: "Seebestattung", description: "Beisetzung in Nord- oder Ostsee" },
-            ].map((type, index) => (
-              <Card key={index} className="text-center shadow-soft hover:shadow-elegant transition-elegant">
-                <CardHeader>
-                  <CardTitle className="font-serif text-lg">{type.title}</CardTitle>
-                  <CardDescription className="text-sm">
-                    {type.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Button variant="outline" size="sm" asChild>
-                    <Link to="/bestattungsarten">Details</Link>
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
           </div>
         </div>
       </section>

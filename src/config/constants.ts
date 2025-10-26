@@ -23,16 +23,16 @@ export const SITE_CONFIG = {
   email: "info@bestattungshaus-flossdorf.de",
   
   // Website-Informationen
-  siteName: "Bestattungshaus Flossdorf",
+  siteName: "Bestattungshaus Floßdorf",
   siteDescription: "Einfühlsame Bestattungsdienstleistungen mit persönlicher Betreuung",
   
   // Impressum & Rechtliches
   legal: {
-    companyName: "Bestattungshaus Flossdorf",
-    owner: "Jill Flossdorf",
+    companyName: "Bestattungshaus Floßdorf",
+    owner: "Jill Floßdorf",
     taxId: "020 817 61 886", // Steuernummer
-    // vatId: "DE123456789", // Umsatzsteuer-ID
-    responsibleForContent: "Jill Flossdorf",
+    vatId: "DE455232575", // Umsatzsteuer-ID
+    responsibleForContent: "Jill Floßdorf",
   },
   
   // Social Media (falls vorhanden)
@@ -59,6 +59,4 @@ export const COMPANY_NAME = SITE_CONFIG.legal.companyName;
 export const OWNER = SITE_CONFIG.legal.owner;
 export const TAX_ID = SITE_CONFIG.legal.taxId;
 export const VAT_ID = SITE_CONFIG.legal.vatId;
-export const REGISTER_COURT = SITE_CONFIG.legal.registerCourt;
-export const REGISTER_NUMBER = SITE_CONFIG.legal.registerNumber;
 export const RESPONSIBLE_FOR_CONTENT = SITE_CONFIG.legal.responsibleForContent;
