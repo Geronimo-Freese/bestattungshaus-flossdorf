@@ -19,7 +19,7 @@ export const Footer = () => {
                 }}
               />
               <span className="font-serif text-xl font-semibold">
-                Bestattungshaus Flossdorf
+                Bestattungshaus Floßdorf
               </span>
             </div>
             <p className="text-primary-foreground/80 mb-4">
