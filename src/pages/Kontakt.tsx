@@ -174,7 +174,12 @@ ${firstName} ${lastName}`;
                 <div className="text-center">
                   <p className="text-3xl font-bold text-destructive mb-2">{EMERGENCY_PHONE}</p>
                   <p className="text-muted-foreground mb-4">Kostenlos aus allen Netzen</p>
-                  <Button variant="destructive" size="lg" className="w-full">
+                  <Button 
+                    variant="destructive" 
+                    size="lg" 
+                    className="w-full"
+                    asChild
+                  >
                     <a href={`tel:${EMERGENCY_PHONE}`} className="flex items-center justify-center">
                       <Phone className="mr-2 h-5 w-5" />
                       Jetzt anrufen
